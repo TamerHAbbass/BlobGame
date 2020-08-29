@@ -1,8 +1,8 @@
 import random
+import pygame
 
-# To be set at a different time:
-WIDTH = 0
-HEIGHT = 0
+WIDTH = 800
+HEIGHT = 600
 
 class Blob:
 
