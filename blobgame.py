@@ -3,6 +3,13 @@ import pygame
 
 WIDTH = 800
 HEIGHT = 600
+WHITE = (255, 255, 255)
+BLUE = (0, 0, 255)
+RED = (255, 0, 0)
+
+game_display = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption('Blob World!')
+clock = pygame.time.Clock()
 
 class Blob:
 
@@ -26,3 +33,22 @@ class Blob:
         if self.y < 0: self.y = 0
         elif self.y > HEIGHT: self.y = HEIGHT
 
+
+def draw_enviornment():
+    game_display.fill(WHITE)
+    pygame.display.update()
+
+
+def main():
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+        
+        draw_enviornment()
+        clock.tick(60)
+
+
+if __name__ == '__main__':
+    main()
